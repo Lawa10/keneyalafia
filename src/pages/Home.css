@@ -1,0 +1,117 @@
+.plan {
+    background-image: url(./public/accueil.png);
+   
+}
+
+.cadre{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 120px;
+    height: 122px;
+    border-radius: 8px;
+    border: 1px solid #f5f5f5;
+    background: #ffffff;
+    background-blend-mode: normal;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.transparent-content {
+    --background: transparent !important; /* Garde le fond transparent */
+    height: 100%; /* Assure que le contenu occupe toute la hauteur */
+    width: 100%; /* Assure que le contenu occupe toute la largeur */
+    
+}
+
+h3{
+font-size: 17px !important;
+color: #4169e1;
+font-family: Inter;
+font-weight: bold;
+margin-top: 5px !important;
+}
+
+.hospital-img{
+    margin-top: 20px;
+}
+
+.title{
+    color: #4169e1;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 21.78px;
+    margin-bottom: 20px;
+}
+
+.publiciter{
+    margin-top: 120px;
+    position: absolute;
+    left: 7%;
+    width: 413px;
+    height: 120px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.pub-cadre{
+    position: absolute;
+
+  width: 326.56px;
+  height: 120px;
+  border-radius: 11px;
+  border: 1px solid #686868;
+  background: #ffffff;
+  background-blend-mode: normal;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+}
+
+.pub-img{
+    position: relative;
+    left: 240px; 
+}
+
+.specialist{
+    margin-top: 350px;
+}
+
+.cadre-spc{
+    width: 130px;
+    height: 170px;
+    background: linear-gradient(180deg, #ec1212 0%, #59adff 100%);
+    background-blend-mode: normal;
+}
+
+.spc-img{
+    position: absolute;
+    left: 28.01px;
+    top: 25px;
+    width: 63.56px;
+    height: 50px;
+}
+
+h4{
+    position: absolute;
+  left: 34px;
+  top: 81px;
+  color: #ffffff;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 18.15px;
+}
+
+.nbre{
+    position: absolute;
+    left: 30.17px;
+    top: 112px;
+    width: 90px;
+    height: 18px;
+    color: #ffffff;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18.15px;
+}
