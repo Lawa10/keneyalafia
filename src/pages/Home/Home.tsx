@@ -4,12 +4,13 @@ import { useEffect, useState } from 'react';
 
 const Home: React.FC = () => {
   const [hopitals, sethopitals] = useState<string[]>([])
+  const [specialist, setspecialist] = useState <string[]>([])
 
   function listhopital(){
- const nomhopital =[
-    'pasteur',
-    ' gabrielToure',
-    'Hopital du Mali',
+  const nomhopital =[
+    'Pasteur',
+    'GabrielToure',
+    'Hôpital du Mali',
     // 'IOTA',
     // 'Point G',
     // 'ADEVIS'
@@ -17,15 +18,27 @@ const Home: React.FC = () => {
 sethopitals(nomhopital)
   }
 
+  function listspecialist(){
+    const nomspecialist =[
+      'Médicales',
+      'Chirurgicales',
+      'Pédiatriques',
+      
+
+    ]
+    setspecialist(nomspecialist)
+  }
+ 
   useEffect(()=>{
   listhopital()
+  listspecialist()
   }, [] )
 
   return (
     <IonPage className='plan' >
-        <IonHeader>
-          <img src="./public/logo.png" alt="" />
-        </IonHeader>
+        {/* <IonHeader> */}
+          <img src="./public/logo.png" alt="" className='logo'/>
+        {/* </IonHeader> */}
 
         <IonContent className="transparent-content">
 
@@ -33,7 +46,7 @@ sethopitals(nomhopital)
           <div>
           <IonGrid>
         <IonRow>
-          <IonCol className='title'>Hopital</IonCol>
+          <IonCol className='title'>Hôpital</IonCol>
         </IonRow>
     
 
@@ -73,33 +86,30 @@ sethopitals(nomhopital)
          
           {/* publiciter end */}
 
-           {/* specialist start */}
-           <div className='specialist'>
-          <IonGrid>
-        <IonRow>
-          <IonCol className='title'>Spécialist</IonCol>
-        </IonRow>
-    
+         {/* specialist start */}
+<div className='specialist'>
+  <IonGrid>
+    <IonRow className='custom-row'>
+      <IonCol className='title'>Spécialist</IonCol>
+      <IonCol className='title'></IonCol>
+      <IonCol className='title'>voir plus</IonCol>
+    </IonRow>
 
-        <IonRow>
-       
-          <IonCol>
+    <IonRow>
+      {specialist.map((specialists, index) => (
+        <IonCol key={index}>
           <div className='cadre-spc'>
-           <img src="./public/spc-img.png" className='spc-img' />
-           <h4>Cardio</h4>
-           <p className='nbre'>27 hôpitaux </p>
-         </div>
-          </IonCol>
-
-          
-      
-    
-        </IonRow>
-        
-      </IonGrid>
+            <img src="./public/spc-img.png"  alt="specialist" />
+            <h4>{specialists}</h4>
+            <p className='nbre'>27 hôpitaux</p>
           </div>
+        </IonCol>
+      ))}
+    </IonRow>
+  </IonGrid>
+</div>
+{/* specialist end */}
 
-          {/* specialist end */}
         </IonContent>
        
       
