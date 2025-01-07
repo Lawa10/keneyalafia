@@ -1,0 +1,22 @@
+.u {
+    background: #4169E1; /* Couleur de fond */
+    margin-bottom: 10px; /* Espacement entre les items */
+    font-weight: bold;
+    height: 100px; /* Hauteur fixe */
+    border-radius: 8px; /* Ajoute des coins arrondis (optionnel) */
+    display: flex; /* Assure un bon alignement */
+    align-items: center; /* Centrage vertical */
+  }
+  
+  .u h2 {
+    color: white; /* Titre en blanc */
+  }
+  
+  .u p {
+    color: white; /* Texte descriptif en blanc */
+  }
+  
+  .u i {
+    color: red; /* Icône en blanc */
+  }
+  

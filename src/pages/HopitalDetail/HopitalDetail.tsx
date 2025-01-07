@@ -1,7 +1,26 @@
 import { IonPage,IonList,IonItem,IonLabel,IonHeader,IonGrid,IonRow,IonCol, IonContent } from '@ionic/react'
 import React from 'react'
+import { useHistory } from 'react-router';
 import './HopitalDetail.css'
 export default function HopitalDetail() {
+  const history = useHistory();
+
+  const golist =() => {
+
+   history.push('/consultation')
+ 
+  }
+  
+  const goecho =() => {
+
+    history.push('/echo')
+  
+   }
+   const goanalyse =() => {
+
+    history.push('/analyse')
+  
+   }
   return (
     <IonPage>
          <IonHeader>
@@ -16,18 +35,18 @@ export default function HopitalDetail() {
                   </IonRow>
                 </IonGrid>
               </IonHeader>
-        <IonContent className='content'>
+        <IonContent className="transparent-content" style={{top:'40px'}}>
         <IonList lines="full" className='container'>
         <IonItem >
-          <IonLabel className='list'> Consultations</IonLabel>
+          <IonLabel className='list' onClick={golist}> Consultations</IonLabel>
         </IonItem>
         <br />
         <IonItem >
-          <IonLabel className='list'>Echo</IonLabel>
+          <IonLabel className='list' onClick={goecho}>Echo</IonLabel>
         </IonItem>
         <br />
         <IonItem >
-          <IonLabel className='list'>Analyses</IonLabel>
+          <IonLabel className='list' onClick={goanalyse}>Analyses</IonLabel>
         </IonItem>
       </IonList>
         </IonContent>

@@ -24,10 +24,10 @@ h1{
     text-align: center;
 }
 
-
+/* 
 .plan {
     background-image: url(./public/accueil.png);
-}
+} */
 .transparent-content {
     --background: transparent !important; /* Garde le fond transparent */
     height: 100%; /* Assure que le contenu occupe toute la hauteur */

@@ -1,11 +1,16 @@
 import { IonContent, IonHeader, IonImg, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCol,IonInfiniteScroll } from '@ionic/react';
 import './Home.css';
 import { useEffect, useState } from 'react';
+import { useHistory } from 'react-router';
 
 const Home: React.FC = () => {
   const [hopitals, sethopitals] = useState<string[]>([])
   const [specialist, setspecialist] = useState <string[]>([])
+  const history = useHistory()
 
+  const godetail =() =>{
+    history.push('./detail')
+  }
   function listhopital(){
   const nomhopital =[
     'Pasteur',
@@ -53,7 +58,7 @@ sethopitals(nomhopital)
         <IonRow>
         {hopitals.map((hopital,index) =>
           <IonCol>
-          <div className='cadre'>
+          <div className='cadre' onClick={godetail}>
            <img src="./public/hospital.png" className='hospital-img' />
            <h3>{hopital}</h3>
          </div>
