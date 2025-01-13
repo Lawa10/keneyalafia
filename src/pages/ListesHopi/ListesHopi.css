@@ -1,0 +1,36 @@
+h1{
+    color: #4169E1;
+    font-size: 15px !important;
+}
+
+.ligne{
+    width: 100%;
+    height: 2px;
+    background-color: #4169E1;
+}
+
+ 
+.cadre{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 90%;
+    height: 122px;
+    border-radius: 8px;
+    border: 1px solid #f5f5f5;
+    background: #ffffff;
+    background-blend-mode: normal;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+/* 
+.plan {
+    background-image: url(./public/accueil.png);
+} */
+.transparent-content {
+    --background: transparent !important; /* Garde le fond transparent */
+    height: 100%; /* Assure que le contenu occupe toute la hauteur */
+    width: 100%; /* Assure que le contenu occupe toute la largeur */
+  
+}

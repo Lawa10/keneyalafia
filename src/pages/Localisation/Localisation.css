@@ -1,0 +1,6 @@
+.transparent-content {
+    --background: transparent !important; /* Garde le fond transparent */
+    height: 100%; /* Assure que le contenu occupe toute la hauteur */
+    width: 100%; /* Assure que le contenu occupe toute la largeur */
+  
+}

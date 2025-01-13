@@ -8,6 +8,9 @@ import Consultation from '../Consultation/Consultation';
 import Echo from '../Echo/Echo';
 import Analyse from '../Analyse/Analyse';
 import Details from '../Details/Details';
+import ListesHopi from '../ListesHopi/ListesHopi';
+import ListesConsulte from '../ListesConsultation/ListesConsulte';
+import Localisation from '../Localisation/Localisation';
 
 export default function Menu() {
   return (
@@ -20,6 +23,9 @@ export default function Menu() {
         <Route path="/echo" component={Echo} />
         <Route path="/analyse" component={Analyse} />
         <Route path="/details" component={Details} />
+        <Route path="/listehopi" component={ListesHopi} />
+        <Route path="/listeconsulte" component={ListesConsulte} />
+        <Route path="/localisation" component={Localisation} />
         <Redirect exact path="/" to="/home" />
       </IonRouterOutlet>
 

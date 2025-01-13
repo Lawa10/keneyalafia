@@ -11,6 +11,15 @@ const Home: React.FC = () => {
   const godetail =() =>{
     history.push('./detail')
   }
+
+  const gohopi =() =>{
+    history.push('./listehopi')
+  }
+
+  const goconsulte =() =>{
+    history.push('./listeconsulte')
+  }
+
   function listhopital(){
   const nomhopital =[
     'Pasteur',
@@ -95,14 +104,14 @@ sethopitals(nomhopital)
 <div className='specialist'>
   <IonGrid>
     <IonRow className='custom-row'>
-      <IonCol className='title'>Spécialist</IonCol>
+      <IonCol className='title'>Consultations</IonCol>
       <IonCol className='title'></IonCol>
-      <IonCol className='title'>voir plus</IonCol>
+      <IonCol className='title' onClick={goconsulte}>voir plus</IonCol>
     </IonRow>
 
     <IonRow>
       {specialist.map((specialists, index) => (
-        <IonCol key={index}>
+        <IonCol key={index} onClick={gohopi}>
           <div className='cadre-spc'>
             <img src="./public/spc-img.png"  alt="specialist" />
             <h4>{specialists}</h4>
